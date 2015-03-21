@@ -1,0 +1,12 @@
+﻿++ New_Android_Project
+
+++++ android看法。
+今天的开始学习android了，也开始了噩梦之旅。因为个人觉得就是一个特别的容器，涵盖了很多不同的东西，太杂乱。第一次接触android是在培训的时候，主要做的是1.6，因为这个好学习，然后现在为了工作，有一次开始了学习android的旅程。配置好了android的开发环境，然后兴致勃勃的开始了android的学习之旅。结果第一个项目都遭到了极大的打击。
+
++++++ 1、新建项目
+因为自己看的书是疯狂android讲义，其作者当时的版本是android 4.2.2，我现在最新的版本是android 5.0.1，ADT和SDK都是最新版本的，结果按照书上的效果，新建的项目全是错误。
+
+例如：${workspace}/appcompat_v7/res/values-v21/style-base.xml中的某行错误。需要修改的就是将${workspace}/appcompat_v7/project.properties中的target 改为target=android-21，这里是指定ADT支持的最高的版本号。clean项目，build appcompat_v7项目，再一次编写项目。
+
++++++ 2、无appcompat_v7项目
+有时appcompat_v7项目会给自己的项目带来很多的错误，所以为了不用appcompat_v7项目会减少很多的麻烦，但是新建项目又会报很多的错误，新手对于这些错误的处理方法就是删除东西将一些系统自动化处理的文件删除，主要是xml文件，因为R.java是由系统生成的（appt），所以减少xml产生的错误就会使得java方面的编写比较好。
